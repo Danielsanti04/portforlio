@@ -5,35 +5,19 @@
   <meta charset = "utf-8">
   <meta name =" viewport" content="width=device-width, initial-scale=1">
   <link rel = "stylesheet" href="bootstrap/css/bootstrap.min.css">
-  <link rel = "stylesheet" href="">
+  <link rel = "stylesheet" href="Style.css">
   <script src = "jquery/jquery.min.js"></script>
   <script src = "bootstrap/js/bootstrap.min.js"></script>
-  <style>
-    .footer {
-       position: fixed;
-       left: 0;
-       bottom: 0;
-       width: 100%;
-       background-color: black;
-       color: white;
-       text-align: center;
-    }
-    .h1{
-      text-align: center;
-    }
-    
-    </style>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <a class="navbar-brand" href="default.html">About Me</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+
   
     <div class="collapse navbar-collapse" id="navbarColor01">
       <ul class="navbar-nav mr-auto">
-        
+        <li class="nav-item">
+          <a class="nav-link" href="default.html">About Me</a>
+        </li>
         <li class="nav-item">
           <a class="nav-link" href="Resume.html">Resume</a>
         </li>
@@ -50,20 +34,51 @@
   <h1>Projects:</h1>
   <div class="jumbotron">
     <h3>Nike Store Website</h3>
-    <img src= "Pictures/2.jpg" align= "right" width="300px" height="120px">
     <h5>Practice Sample</h5>
-    <h6>A Website I Design for new interface of Nike Store. I'm currently adding some new feature for this website.</h6>
-    
+    <h6>A Website I Design for new interface of Nike Store. I'm currently adding some new feature for this website. This
+      website I design is a friendly user for kids and adults through online to see easily the categories and 
+      different design of shoes for men and women.</h6>
+      <div class="container1">
+        <img src="Pictures/2.jpg" style="max-width:100%;cursor:pointer"
+      onclick="onClick(this)" class="modal-hover-opacity">
+      <div id="modal01" class="modal" onclick="this.style.display='none'">
+        <span class="close">&times;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <div class="modal-content">
+          <img id="img01" style="max-width:100%">
+        </div>
+        
+      </div>
+      </div>
+      <h6>(Click to view photo)</h6>
   </div>
   <div class="jumbotron">
     <h3>Photo Gallery</h3>
-    <img src= "Pictures/3.jpg" align= "right" width="300px" height="120px">
+    
     <h5>Quiz Website</h5>
-    <h6>This Website is design for random gallery photos of an anime.</h6>
+    <h6>This Website is design for random gallery photos of an anime. This website contains a information of the characters 
+      of Seven Deadly Sins Anime and what are their roles in this anime. This anime is also known as best anime among the
+      other anime, community has increased as fans anticipated another season for the anime. </h6>
+      <div class="container1">
+        <img src="Pictures/3.jpg" style="max-width:100%;cursor:pointer"
+      onclick="onClick(this)" class="modal-hover-opacity">
+      <div id="modal01" class="modal" onclick="this.style.display='none'">
+        <span class="close">&times;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <div class="modal-content">
+          <img id="img01" width="auto" height="auto">
+        </div>
+      </div>
+      </div>
+      <h6>(Click to view photo)</h6>
   </div>
   <div class="footer">
     <h6> Contact No: +63 (987654321)</h6>
     <h6>Email: santiago.daniel@ue.edu.ph</h6>
   </div>
+  <script>
+    function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+}
+    </script>
 </body>
 </html>
